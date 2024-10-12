@@ -12,14 +12,26 @@ This project implements a **Random Forest Classifier** to predict the target var
 - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
 - [Model Training and Evaluation](#model-training-and-evaluation)
 - [Hyperparameter Tuning with Optuna](#hyperparameter-tuning-with-optuna)
-- [Model Interpretability](#model-interpretability)
 - [Saving and Loading the Model](#saving-and-loading-the-model)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Project Structure
 
-project/ │ ├── data/ │ ├── X_Train_Data_Input.csv │ ├── Y_Train_Data_Target.csv │ ├── X_Test_Data_Input.csv │ ├── Y_Test_Data_Target.csv │ ├── src/ │ ├── train_model.py # Main script for training and evaluating the model │ ├── utils.py # Utility functions for data preprocessing, visualization, etc. │ ├── models/ │ ├── final_rf_model.pkl # Saved Random Forest model │ ├── analysis/ │ ├── exploratory data analysis.ipynb # Jupyter notebook for exploratory data analysis │ ├── README.md └── requirements.txt
+project/ │ 
+         ├── data/ │
+                   ├── X_Train_Data_Input.csv │
+                   ├── Y_Train_Data_Target.csv │
+                   ├── X_Test_Data_Input.csv │
+                   ├── Y_Test_Data_Target.csv │
+         ├── src/ │
+                  ├── rf_model.py # Main script for training and evaluating the model │
+                  ├── utils.py # Utility functions for data preprocessing, visualization, etc. │
+         ├── models/ │
+                     ├── final_rf_model.pkl # Saved Random Forest model │
+         ├── analysis/ │ 
+                       ├── exploratory data analysis.ipynb # Jupyter notebook for exploratory data analysis │
+         ├── README.md 
+         └── requirements.txt
 
 
 ## Features
@@ -59,11 +71,11 @@ The EDA notebook includes:
 ** Visualizations like histograms, bar charts, and box plots.
 Correlation matrix and heatmaps to explore relationships between features.
 ** Outlier analysis and handling of missing values.
-**Model Training and Evaluation**
+## Model Training and Evaluation
 The model is trained using a Random Forest Classifier.
 Data is split into training, validation, and test sets.
 Performance metrics such as accuracy, cross-validation scores, confusion matrix, and ROC-AUC score are calculated.
-**Hyperparameter Tuning with Optuna**
+## Hyperparameter Tuning with Optuna
 Optuna is used to optimize the hyperparameters of the Random Forest model:
 
 n_estimators: Number of trees in the forest.
@@ -74,7 +86,7 @@ Model Interpretability
 SHAP values: Used to visualize feature importance and understand their effects on predictions.
 Partial Dependence Plots (PDP): Illustrates the relationship between features and predicted outcomes.
 
-**Saving and Loading the Model**
+## Saving and Loading the Model
 The trained model is saved using joblib:
 
 joblib.dump(final_rf_model, 'models/final_rf_model.pkl')
