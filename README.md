@@ -1,4 +1,4 @@
-# Random Forest Model for Classification
+# Random Forest Model for GST Analytics
 
 ## Overview
 This project implements a **Random Forest Classifier** to predict the target variable using a dataset of features. The model is optimized using **Optuna for hyperparameter tuning**, and various exploratory data analysis (EDA) techniques are used to understand the dataset. The project also integrates **SHAP** and **Partial Dependence Plots (PDP)** for model interpretability.
